@@ -5,11 +5,104 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/css/style.css">
+    <script src="./src/js/main.js" defer></script>
     <title>Memory Game</title>
 </head>
-
 <body>
-
+    <main class="game">
+        <section class="difficulty">
+            <h2>Memory Game</h2>
+            <button class="button button--difficulty">Easy</button>
+            <button class="button button--difficulty">Medium</button>
+            <button class="button button--difficulty">Hard</button>
+        </section>
+        <section class="username hidden">
+            <h2>Memory Game</h2>
+            <h3>Add User</h3>
+            <input type="text" class="username__input">
+            <p class="username__message"></p>
+            <button class="button">Add User</button>
+            <button class="button">Start Game</button>
+        </section>
+        <section class="game hidden">
+            <h2>Memory Game</h2>
+            <article class="game-board">
+                <div class="game-board__space">
+                    <img src="./src/img/1.png" alt="Card with C Sharp Logo" class="game-board__card">
+                    <img src="./src/img/1.png" alt="Card with C Sharp Logo" class="game-board__card">    
+                </div>
+                <div class="game-board__space">
+                    <img src="./src/img/1.png" alt="Card with C Sharp Logo" class="game-board__card">
+                    <img src="./src/img/1.png" alt="Card with C Sharp Logo" class="game-board__card">    
+                </div>
+                <div class="game-board__space">
+                    <img src="./src/img/1.png" alt="Card with C Sharp Logo" class="game-board__card">
+                    <img src="./src/img/1.png" alt="Card with C Sharp Logo" class="game-board__card">  
+                </div>
+                <div class="game-board__space">
+                    <img src="./src/img/1.png" alt="Card with C Sharp Logo" class="game-board__card">
+                    <img src="./src/img/1.png" alt="Card with C Sharp Logo" class="game-board__card">  
+                </div>
+                <div class="game-board__space">
+                    <img src="./src/img/1.png" alt="Card with C Sharp Logo" class="game-board__card">
+                    <img src="./src/img/1.png" alt="Card with C Sharp Logo" class="game-board__card">    
+                </div>
+                <div class="game-board__space">
+                    <img src="./src/img/1.png" alt="Card with C Sharp Logo" class="game-board__card">
+                    <img src="./src/img/1.png" alt="Card with C Sharp Logo" class="game-board__card">     
+                </div>
+                <div class="game-board__space">
+                    <img src="./src/img/1.png" alt="Card with C Sharp Logo" class="game-board__card">
+                    <img src="./src/img/1.png" alt="Card with C Sharp Logo" class="game-board__card">    
+                </div>
+                <div class="game-board__space">
+                    <img src="./src/img/1.png" alt="Card with C Sharp Logo" class="game-board__card">
+                    <img src="./src/img/1.png" alt="Card with C Sharp Logo" class="game-board__card">     
+                </div>
+                <div class="game-board__space">
+                    <img src="./src/img/1.png" alt="Card with C Sharp Logo" class="game-board__card">
+                    <img src="./src/img/1.png" alt="Card with C Sharp Logo" class="game-board__card"> 
+                </div>
+                <div class="game-board__space">
+                    <img src="./src/img/1.png" alt="Card with C Sharp Logo" class="game-board__card">
+                    <img src="./src/img/1.png" alt="Card with C Sharp Logo" class="game-board__card">    
+                </div>
+                <div class="game-board__space">
+                    <img src="./src/img/1.png" alt="Card with C Sharp Logo" class="game-board__card">
+                    <img src="./src/img/1.png" alt="Card with C Sharp Logo" class="game-board__card">    
+                </div>
+                <div class="game-board__space">
+                    <img src="./src/img/1.png" alt="Card with C Sharp Logo" class="game-board__card">
+                    <img src="./src/img/1.png" alt="Card with C Sharp Logo" class="game-board__card">     
+                </div>
+                <div class="game-board__space">
+                    <img src="./src/img/1.png" alt="Card with C Sharp Logo" class="game-board__card">
+                    <img src="./src/img/1.png" alt="Card with C Sharp Logo" class="game-board__card">    
+                </div>
+                <div class="game-board__space">
+                    <img src="./src/img/1.png" alt="Card with C Sharp Logo" class="game-board__card">
+                    <img src="./src/img/1.png" alt="Card with C Sharp Logo" class="game-board__card">    
+                </div>
+                <div class="game-board__space">
+                    <img src="./src/img/1.png" alt="Card with C Sharp Logo" class="game-board__card">
+                    <img src="./src/img/1.png" alt="Card with C Sharp Logo" class="game-board__card">    
+                </div>
+                <div class="game-board__space">
+                    <img src="./src/img/1.png" alt="Card with C Sharp Logo" class="game-board__card">
+                    <img src="./src/img/1.png" alt="Card with C Sharp Logo" class="game-board__card">    
+                </div>
+            </article>
+            <p class="time"></p>
+        </section>
+        <section class="scoreboard hidden">
+            <h2>Scoreboard</h2>
+            <article class="player">
+                <p class="player__name">Sara</p>
+                <p class="player__difficulty">Easy</p>
+                <p class="player__time">42 seconds</p>
+            </article>
+        </section>
+    </main>
 </body>
-
 </html>

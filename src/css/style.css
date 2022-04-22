@@ -1,0 +1,37 @@
+@import url('difficulty.css');
+@import url('username.css');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+:root{
+    --main-color: #EDEED5;
+    --secondary-color: #37A082;
+    --tertiary-color: #EF1300;
+    --quaternary-color: #FFAAA7;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game{
+    height: 90%;
+    width: 90%;
+}
+
+.game__card {
+    height: 5rem;
+}
+
+.hidden {
+    display: none;
+}
+
