@@ -1,4 +1,4 @@
-import { checkCards } from "./cards.js";
+import { checkCards, resetGame } from "./cards.js";
 const game_board = document.getElementById("game_board");
 
 const getCards = () => [
