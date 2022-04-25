@@ -1,0 +1,41 @@
+.game{
+    display: flex;
+    flex-direction: column;
+}
+.game-board{
+    display: grid;
+    grid-template-columns: repeat(4, 4.5rem);
+    grid-template-rows: repeat(4, 4.5rem);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    perspective: 800px;
+}
+.game-board__space{
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    box-shadow: 10px 10px 20px 3px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    transform-style: preserve-3d;
+    transition: all 1s ease;
+    transform: rotateY(0deg);
+}
+
+.game-board__front-card, .game-board__back-card{
+    height: 100%;
+    position: absolute;
+    border-radius: 10px;
+    transform: scaleX(-1);
+}
+.game-board__back-card{
+    width: 100%;
+    background: #a13f3f;
+    backface-visibility: hidden;
+}
+
+.flipCard{
+    transform: rotateY(180deg) ;
+}
