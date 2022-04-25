@@ -16,6 +16,11 @@ const checkCards = (e) => {
       resetDuo(flippedCards);
     }
   }
+  if (matchedCards.length === 16) {
+    setTimeout(() => {
+      // DO SOMETHING ON WON
+    }, 1000);
+  }
 };
 
 const setMatch = (flippedCards) => {
