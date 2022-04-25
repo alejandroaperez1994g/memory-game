@@ -34,4 +34,23 @@ const resetDuo = (flippedCards) => {
   });
 };
 
-export { checkCards };
+const resetGame = () => {
+  let dataCards = getCards();
+  let frontOfCards = document.querySelectorAll(".game-board__front-card");
+  let cards = document.querySelectorAll(".game-board__space");
+  game_board.style.pointerEvents = "none";
+
+  dataCards.forEach((element, index) => {
+    cards[index].classList.remove("flipCard");
+
+    setTimeout(() => {
+      frontOfCards[index].src = element.imgSrc;
+      cards[index].setAttribute("name", element.name);
+      cards[index].style.pointerEvents = "all";
+
+      game_board.style.pointerEvents = "all";
+    }, 1000);
+  });
+};
+
+export { checkCards, resetGame };
