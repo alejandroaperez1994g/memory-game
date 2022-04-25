@@ -1,5 +1,6 @@
 @import url('difficulty.css');
 @import url('username.css');
+@import url('game-board.css');
 
 *{
     margin: 0;
