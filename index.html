@@ -11,11 +11,15 @@
 </head>
 <body>
     <main class="game">
-        <section class="difficulty hidden">
-            <h2>Memory Game</h2>
-            <button class="button button--difficulty">Easy</button>
-            <button class="button button--difficulty">Medium</button>
-            <button class="button button--difficulty">Hard</button>
+        <section class="difficulty">
+            <img class="difficulty__logo" src="./src/assets/img/logo_tr.svg" alt="logo of memory game">
+            <img src="./src/assets/img/stripes_mobile.png" alt="Color" class="difficulty__color-bar">
+            <img src="./src/assets/img/logo-grey.svg" alt="logo for programming languages" class="difficulty__logo-grey">
+            <div class="difficulty__footer">
+                <button class="button button--difficulty">Easy</button>
+                <button class="button button--difficulty">Medium</button>
+                <button class="button button--difficulty">Hard</button>
+            </div>
         </section>
         <section class="username hidden">
             <h2>Memory Game</h2>
@@ -25,10 +29,9 @@
             <button class="button">Add User</button>
             <button class="button">Start Game</button>
         </section>
-        <section class="game ">
+        <section class="game hidden">
             <h2>Memory Game</h2>
             <article id="game_board" class="game-board">
-                
             </article>
             <p class="time"></p>
         </section>
