@@ -48,3 +48,5 @@ const shuffleCards = () => {
 };
 
 shuffleCards();
+
+export { getCards };
