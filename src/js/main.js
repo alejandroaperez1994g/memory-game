@@ -1,4 +1,5 @@
 import { checkCards, resetGame } from "./cards.js";
+import { startTimer, stopTimer } from "./timer.js";
 const game_board = document.getElementById("game_board");
 
 const getCards = () => [
@@ -48,5 +49,4 @@ const shuffleCards = () => {
 };
 
 shuffleCards();
-
 export { getCards };
