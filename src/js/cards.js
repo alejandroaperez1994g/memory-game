@@ -1,3 +1,5 @@
+import { getCards } from "./main.js";
+
 const checkCards = (e) => {
   let flipCard = e.target;
   flipCard.classList.add("flipped");
@@ -36,6 +38,7 @@ const resetDuo = (flippedCards) => {
 
 const resetGame = () => {
   let dataCards = getCards();
+  dataCards.sort(() => Math.random() - 0.5);
   let frontOfCards = document.querySelectorAll(".game-board__front-card");
   let cards = document.querySelectorAll(".game-board__space");
   game_board.style.pointerEvents = "none";
