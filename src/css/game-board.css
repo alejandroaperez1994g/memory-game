@@ -16,8 +16,8 @@
 .game-board{
     margin-top: 6rem;
     display: grid;
-    grid-template-columns: repeat(4, 5rem);
-    grid-template-rows: repeat(4, 5rem);
+    grid-template-columns: repeat(4, 4.5rem);
+    grid-template-rows: repeat(4, 4.5rem);
     grid-column-gap: 1rem;
     grid-row-gap: 1rem;
     perspective: 800px;
@@ -116,7 +116,16 @@
     
 }
 
-.time {
-    margin-top: 2rem;
+.game__time-div {
+    position: absolute;
+    bottom: 0;
+    width: 70%;
+    height: 6rem;
+    margin-bottom: 2rem;
     outline: solid 1px black;
+    background-color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 1rem;
 }
