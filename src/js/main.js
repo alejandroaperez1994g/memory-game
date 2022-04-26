@@ -1,8 +1,7 @@
 import { checkCards, resetGame } from "./cards.js";
 import { startTimer, stopTimer } from "./timer.js";
-const game_board = document.getElementById("game_board");
 
-console.log(game_board);
+const game_board = document.getElementById("game_board");
 
 const getCards = () => [
   { imgSrc: "./src/assets/img/1.png", name: "c#" },
@@ -26,6 +25,7 @@ const getCards = () => [
 const shuffleCards = () => {
   let cards = getCards();
   cards.sort(() => Math.random() - 0.5);
+
   let i = 1;
 
   cards.forEach((item) => {
@@ -41,15 +41,12 @@ const shuffleCards = () => {
     back.setAttribute("data", i);
     front.src = item.imgSrc;
 
-    card.setAttribute("name", item.name);
-    front.src = item.imgSrc;
-
     game_board.appendChild(card);
     card.appendChild(front);
     card.appendChild(back);
 
     card.addEventListener("click", (e) => {
-      card.classList.add("flipCard");
+      card.classList.toggle("flipCard");
       checkCards(e);
     });
     i += 1;
@@ -57,4 +54,4 @@ const shuffleCards = () => {
 };
 
 shuffleCards();
-export { getCards };
+export { getCards, shuffleCards };
