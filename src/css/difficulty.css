@@ -1,21 +1,46 @@
 .difficulty{
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2rem;
+    justify-content: center;
+    background: var(--main-color);
+    overflow: hidden;
+    position: relative;
 }
 
-h2{
-    text-align: center;
-    margin-bottom: 8rem;
-}
-.button{
-    width: 70%;
-    height: 50px;
+.difficulty__logo {
+    height: 6rem;
+    margin-bottom: 2rem;
 }
 
-.button--difficulty{
-    color: var(--main-color);
+.difficulty__color-bar {
+    height: 16rem;
+    margin-left: 8rem;
+} 
+
+.difficulty__logo-grey {
+    height: 5rem;
+    margin-top: 1rem;
+    align-self: flex-end;
+    margin-right: 1rem;
+}
+
+.difficulty__footer {
+    width: 100%;
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+  .button--difficulty {
+    color: black;
     background-color: var(--secondary-color) ;
+    box-shadow: inset .1rem .1rem .2rem black;
     font-weight: bold;
+    font-size: 1.5rem;
+    width: 60%;
+    height: 3.5rem;
 }

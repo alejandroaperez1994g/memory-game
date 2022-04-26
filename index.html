@@ -6,31 +6,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./src/css/style.css">
-    <script src="./src/js/main.js" type="module"></script>
+    <script src="./src/js/main.js" defer></script>
     <title>Memory Game</title>
 </head>
-
 <body>
-    <main class="game">
+    <main class="game-all">
         <section class="difficulty hidden">
-            <h2>Memory Game</h2>
-            <button class="button button--difficulty">Easy</button>
-            <button class="button button--difficulty">Medium</button>
-            <button class="button button--difficulty">Hard</button>
+            <img class="difficulty__logo" src="./src/assets/img/logo_tr.svg" alt="logo of memory game">
+            <img src="./src/assets/img/stripes_mobile.png" alt="Color" class="difficulty__color-bar">
+            <img src="./src/assets/img/logo-grey.svg" alt="logo for programming languages" class="difficulty__logo-grey">
+            <div class="difficulty__footer">
+                <button class="button button--difficulty">Easy</button>
+                <button class="button button--difficulty">Medium</button>
+                <button class="button button--difficulty">Hard</button>
+            </div> 
         </section>
         <section class="username hidden">
-            <h2>Memory Game</h2>
-            <h3>Add User</h3>
+            <img class="username__logo" src="./src/assets/img/logo_tr.svg" alt="logo of memory game">
+            <div class="username__color-div"></div>
+            <h3 class="username__heading">Add User</h3>
             <input type="text" class="username__input">
-            <p class="username__message"></p>
-            <button class="button">Add User</button>
-            <button class="button">Start Game</button>
+            <div class="username__message-div">
+                <p class="username__message">Message</p>
+            </div>
+            <button class="button button--username">Add User</button>
+            <button class="button button--username">Start Game</button>
         </section>
-        <section class="game ">
-            <h2>Memory Game</h2>
+        <section class="game">
+            <img class="game__logo" src="./src/assets/img/logo_tr.svg" alt="logo of memory game">
             <article id="game_board" class="game-board">
-
             </article>
+            <div class="game__color-div"></div>
             <p class="time"></p>
         </section>
         <section class="scoreboard hidden">
@@ -43,5 +49,4 @@
         </section>
     </main>
 </body>
-
 </html>

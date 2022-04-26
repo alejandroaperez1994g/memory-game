@@ -1,0 +1,80 @@
+.username {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    background: var(--main-color);
+    overflow: hidden;
+    position: relative; 
+    gap: 2rem;
+}
+
+.username__logo {
+    width: 75%;
+    margin-top: 4rem;
+    margin-bottom: 6rem;
+}
+
+.username__color-div {
+    width: 150%;
+    height: 14rem;
+    transform: rotate(-30deg);
+    background: linear-gradient(to bottom, 
+        #FC7303 14%,  
+        #FE5204 14%, 
+        #FE5204 28%, 
+        #FB0002 28%, 
+        #FB0002 42%, 
+        #FF055D 42%,
+        #FF055D 56%,
+        #D70554 56%, 
+        #D70554 70%, 
+        #9F003F 70%, 
+        #9F003F 84%, 
+        #6A0230 84%);
+  
+}
+
+.username__heading {
+    margin-top: -10rem;
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+    text-shadow: .2rem .2rem var(--main-color), .3rem .3rem var(--tertiary-color);
+    z-index: 1;
+}
+
+.username__input {
+    height: 3.5rem;
+    width: 60%;
+    border-radius: .5rem;
+    z-index: 1;
+    font-size: 1.5rem;
+}
+
+.username__message-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 4rem;
+    width: 100%;
+    height: 3rem;
+    text-align: center;
+    color: var(--main-color);
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: hsla(5, 100%, 47%, 0.7);
+    z-index: 1;    z
+}
+
+/* See difficulty.css for full .button--username properties. */
+
+.button--username {
+    color: var(--main-color);
+    background-color: black;
+    box-shadow: inset .2rem .2rem var(--secondary-color);
+    font-weight: bold;
+    font-size: 1.5rem;
+    width: 60%;
+    height: 3.5rem;
+}
