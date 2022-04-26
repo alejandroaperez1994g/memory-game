@@ -22,8 +22,10 @@ const getCards = () =>[
 const shuffleCards = () =>{
     let cards = getCards();
     cards.sort(()=> Math.random() - 0.5)
+    i = 1
 
     cards.forEach(item =>{
+        console.log(item)
         let card = document.createElement('div');
         let front = document.createElement('img')
         let back = document.createElement('div')
@@ -31,8 +33,9 @@ const shuffleCards = () =>{
         card.classList.add('game-board__space')
         front.classList.add('game-board__front-card')
         back.classList.add('game-board__back-card')
-        
+
         card.setAttribute('name', item.name)
+        back.setAttribute('data', i);
         front.src = item.imgSrc;
 
         game_board.appendChild(card);
@@ -42,7 +45,7 @@ const shuffleCards = () =>{
         card.addEventListener('click', ()=>{
             card.classList.add('flipCard')
         })
-
+        i += 1;
     })
 }
 

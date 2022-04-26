@@ -23,9 +23,11 @@ body {
     align-items: center;
 }
 
-.game{
-    height: 90%;
-    width: 90%;
+.game-all {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .game__card {
