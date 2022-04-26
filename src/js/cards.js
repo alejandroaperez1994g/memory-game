@@ -1,11 +1,10 @@
-import { getCards } from "./main.js";
+import { getCards, shuffleCards } from "./main.js";
 
 const checkCards = (e) => {
   let flipCard = e.target;
   flipCard.classList.add("flipped");
   const flippedCards = document.querySelectorAll(".flipped");
   const matchedCards = document.querySelectorAll(".flipCard");
-
   if (flippedCards.length === 2) {
     if (
       flippedCards[0].getAttribute("name") ===
@@ -18,7 +17,7 @@ const checkCards = (e) => {
   }
   if (matchedCards.length === 16) {
     setTimeout(() => {
-      // DO SOMETHING ON WON
+      resetGame();
     }, 1000);
   }
 };
@@ -37,28 +36,33 @@ const resetDuo = (flippedCards) => {
     setTimeout(() => {
       element.classList.toggle("flipCard");
       game_board.style.pointerEvents = "all";
-    }, 900);
+    }, 1000);
   });
 };
 
 const resetGame = () => {
-  let dataCards = getCards();
-  dataCards.sort(() => Math.random() - 0.5);
-  let frontOfCards = document.querySelectorAll(".game-board__front-card");
-  let cards = document.querySelectorAll(".game-board__space");
-  game_board.style.pointerEvents = "none";
+  // let dataCards = getCards();
+  // dataCards.sort(() => Math.random() - 0.5);
+  // let frontOfCards = document.querySelectorAll(".game-board__front-card");
+  // let cards = document.querySelectorAll(".game-board__space");
 
-  dataCards.forEach((element, index) => {
-    cards[index].classList.remove("flipCard");
+  // game_board.style.pointerEvents = "none";
 
-    setTimeout(() => {
-      frontOfCards[index].src = element.imgSrc;
-      cards[index].setAttribute("name", element.name);
-      cards[index].style.pointerEvents = "all";
+  // dataCards.forEach((element, index) => {
+  //   cards[index].classList.remove("flipCard");
 
-      game_board.style.pointerEvents = "all";
-    }, 1000);
-  });
+  //   setTimeout(() => {
+  //     frontOfCards[index].src = element.imgSrc;
+  //     cards[index].setAttribute("name", element.name);
+  //     cards[index].style.pointerEvents = "all";
+
+  //     game_board.style.pointerEvents = "all";
+  //   }, 1000);
+  // });
+  while (game_board.firstChild) {
+    game_board.removeChild(game_board.lastChild);
+  }
+  shuffleCards();
 };
 
 export { checkCards, resetGame };
