@@ -2,6 +2,7 @@ import { checkCards, resetGame } from "./cards.js";
 import { startTimer, stopTimer } from "./timer.js";
 
 const game_board = document.getElementById("game_board");
+const start = document.getElementById("start");
 
 // Button variables
 const difficultyButtons = document.querySelectorAll('.button--difficulty');
@@ -65,8 +66,18 @@ const shuffleCards = () => {
   });
 };
 
-shuffleCards();
-export { getCards, shuffleCards };
+//Show cards for three secs
+start.addEventListener('click', () => {
+    let nodelist = document.querySelector('#game_board').children;
+    for(let i = 0; i < nodelist.length; i++){
+        nodelist[i].classList.add("flipCard");
+    }
+    setTimeout(() => {
+        for(let i = 0; i < nodelist.length; i++){
+            nodelist[i].classList.remove("flipCard");
+        }
+    }, 3000);
+});
 
 // Add event listeners to buttons on difficulty page
 difficultyButtons.forEach((button) => {
@@ -95,3 +106,6 @@ function processClick (e) {
    }
    
 }
+
+shuffleCards();
+export { getCards, shuffleCards };
