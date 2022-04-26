@@ -1,0 +1,93 @@
+.scoreboard {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    background-color: var(--main-color);
+}
+
+.scoreboard__header {
+    box-sizing: border-box;
+    margin: 1rem 2rem;
+    height: 10%;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.scoreboard__logo {
+    width: 35%;
+}
+
+.scoreboard__title {
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: .1rem .1rem var(--secondary-color);
+    ;}
+
+
+
+.scoreboard__color-div {
+    
+    width: 100%;
+    height: 5rem;    
+    background: linear-gradient(to bottom, 
+        #FC7303 14%,  
+        #FE5204 14%, 
+        #FE5204 28%, 
+        #FB0002 28%, 
+        #FB0002 42%, 
+        #FF055D 42%,
+        #FF055D 56%,
+        #D70554 56%, 
+        #D70554 70%, 
+        #9F003F 70%, 
+        #9F003F 84%, 
+        #6A0230 84%);
+}
+
+.scoreboard__results {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 80%;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    box-sizing: border-box;
+    outline: solid 3px var(--secondary-color);
+    background-color: white;
+    z-index: 1;
+}
+
+.player {
+    table-layout: fixed;
+    text-align: left;
+    width: 100%;
+    margin: 1rem;
+}
+
+.player__name {
+    width: 30%;
+}
+
+.player__difficulty {
+    width:25%;
+}
+
+.player__time {
+    padding-left: 1rem;
+    width: 45%;
+}
+
+.scoreboard__grad {
+    margin-top: 1rem;
+    height: 15%;    
+    width: 100%;
+    justify-content: flex-end;
+    background: linear-gradient(to bottom, var(--main-color) 30%, var(--secondary-color));
+    opacity: 0.8;
+    
+}
