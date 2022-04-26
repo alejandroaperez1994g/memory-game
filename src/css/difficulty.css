@@ -10,13 +10,14 @@
 }
 
 .difficulty__logo {
+    margin-top: -2rem;
     height: 6rem;
     margin-bottom: 2rem;
 }
 
 .difficulty__color-bar {
     height: 16rem;
-    margin-left: 8rem;
+    margin-left: 6rem;
 } 
 
 .difficulty__logo-grey {
@@ -28,11 +29,12 @@
 
 .difficulty__footer {
     width: 100%;
-    margin-top: 4rem;
+    margin-top: 5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 2rem;
 }
 
   .button--difficulty {
