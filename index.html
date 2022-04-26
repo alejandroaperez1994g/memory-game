@@ -12,7 +12,7 @@
 
 <body>
     <main class="game-all ">
-        <section class="difficulty">
+        <section class="difficulty hidden">
             <img class="difficulty__logo" src="./src/assets/img/logo_tr.svg" alt="logo of memory game">
             <img src="./src/assets/img/stripes_mobile.png" alt="Color" class="difficulty__color-bar">
             <img src="./src/assets/img/logo-grey.svg" alt="logo for programming languages"
@@ -34,14 +34,17 @@
             <button class="button button--username">Add User</button>
             <button class="button button--username">Start Game</button>
         </section>
-        <section class="game hidden">
+        <section class="game">
             <img class="game__logo" src="./src/assets/img/logo_tr.svg" alt="logo of memory game">
             <article id="game_board" class="game-board">
             </article>
             <div class="game__color-div"></div>
-            <div class="game__time-div">
-                <p class="game__time-title">Timer:</p>
-                <p class="game__timer"></p>
+            <div class="game__footer">
+                <button class="button button--start">Start!</button>
+                <div class="game__time-div">
+                    <p class="game__time-title">Timer:</p>
+                    <p class="game__timer"></p>
+                </div>
             </div>
         </section>
         <section class="scoreboard hidden">

@@ -23,6 +23,7 @@
     grid-column-gap: 1rem;
     grid-row-gap: 1rem;
     perspective: 800px;
+    margin-bottom: 1rem;
     z-index: 2;
 }
 
@@ -119,12 +120,34 @@
     
 }
 
-.game__time-div {
+.game__footer {
     position: absolute;
     bottom: 0;
+    width: 100%;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+}
+
+.button--start {
+    color: var(--main-color);
+    background-color: black;
+    box-shadow: inset .2rem .2rem var(--secondary-color);
+    font-weight: bold;
+    font-size: 2rem;
+    text-shadow: .1rem .1rem var(--secondary-color);
+    width: 60%;
+    height: 3.5rem;
+    
+}
+
+.game__time-div {
     width: 70%;
     height: 6rem;
-    margin-bottom: 2rem;
     outline: solid 1px black;
     background-color: white;
     font-size: 1.5rem;
