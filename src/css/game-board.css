@@ -7,7 +7,6 @@
     z-index: 0;
     overflow: hidden;
     position: relative;
-    
 }
 
 .game__logo {
@@ -56,7 +55,7 @@
     backface-visibility: hidden;
 }
 
-/* .game-board__rowOne  */
+/* Game card colors - ROW 1 */
 .game-board__back-card[data='1'],
 .game-board__back-card[data='2'],
 .game-board__back-card[data='3'],
@@ -64,7 +63,7 @@
     background-color: #FC7303;
 }
 
-/* Game Boarde  */
+/* Game card colors - ROW 2 */
 .game-board__back-card[data='5'],
 .game-board__back-card[data='6'],
 .game-board__back-card[data='7'],
@@ -72,7 +71,7 @@
     background-color: #FE5204;
 }
 
-/* Game Boarde  */
+/* Game card colors - ROW 3 */
 .game-board__back-card[data='9'],
 .game-board__back-card[data='10'],
 .game-board__back-card[data='11'],
@@ -80,7 +79,7 @@
     background-color: #FB0002;
 }
 
-/* Game Boarde  */
+/* Game card colors - ROW 4 */
 .game-board__back-card[data='13'],
 .game-board__back-card[data='14'],
 .game-board__back-card[data='15'],

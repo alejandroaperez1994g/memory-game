@@ -3,6 +3,18 @@ import { startTimer, stopTimer } from "./timer.js";
 
 const game_board = document.getElementById("game_board");
 
+// Button variables
+const difficultyButtons = document.querySelectorAll('.button--difficulty');
+const usernameButtons = document.querySelectorAll('.button--username');
+
+// Page variables
+const difficultyPage = document.querySelector('.difficulty');
+const usernamePage = document.querySelector('.username');
+const gamePage = document.querySelector('.game');
+
+
+let currentPage = 'difficulty';
+
 const getCards = () => [
   { imgSrc: "./src/assets/img/1.png", name: "c#" },
   { imgSrc: "./src/assets/img/2.png", name: "c++" },
@@ -55,3 +67,31 @@ const shuffleCards = () => {
 
 shuffleCards();
 export { getCards, shuffleCards };
+
+// Add event listeners to buttons on difficulty page
+difficultyButtons.forEach((button) => {
+  button.addEventListener('click', (e) => {
+    processClick(e);
+  });
+});
+
+// Add event listeners to buttons on difficulty page
+usernameButtons.forEach((button) => {
+  button.addEventListener('click', (e) => {
+  processClick(e);
+  });
+});
+
+// Function to handle button clicks, depending on page.
+function processClick (e) {
+   if (currentPage == 'difficulty') {
+     difficultyPage.classList.add('hidden');
+     usernamePage.classList.remove('hidden');
+     currentPage = 'username';
+   } else if (currentPage == 'username') {
+    usernamePage.classList.add('hidden');
+    gamePage.classList.remove('hidden');
+    currentPage = 'game';
+   }
+   
+}
