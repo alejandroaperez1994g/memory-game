@@ -6,20 +6,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./src/css/style.css">
-    <script src="./src/js/main.js" defer></script>
+    <script src="./src/js/main.js" type="module"></script>
     <title>Memory Game</title>
 </head>
+
 <body>
-    <main class="game-all">
-        <section class="difficulty">
+    <main class="game-all ">
+        <section class="difficulty hidden">
             <img class="difficulty__logo" src="./src/assets/img/logo_tr.svg" alt="logo of memory game">
             <img src="./src/assets/img/stripes_mobile.png" alt="Color" class="difficulty__color-bar">
-            <img src="./src/assets/img/logo-grey.svg" alt="logo for programming languages" class="difficulty__logo-grey">
+            <img src="./src/assets/img/logo-grey.svg" alt="logo for programming languages"
+                class="difficulty__logo-grey">
             <div class="difficulty__footer">
                 <button class="button button--difficulty">Easy</button>
                 <button class="button button--difficulty">Medium</button>
                 <button class="button button--difficulty">Hard</button>
-            </div> 
+            </div>
         </section>
         <section class="username hidden">
             <img class="username__logo" src="./src/assets/img/logo_tr.svg" alt="logo of memory game">
@@ -32,7 +34,7 @@
             <button class="button button--username">Add User</button>
             <button class="button button--username">Start Game</button>
         </section>
-        <section class="game hidden">
+        <section class="game">
             <img class="game__logo" src="./src/assets/img/logo_tr.svg" alt="logo of memory game">
             <article id="game_board" class="game-board">
             </article>
@@ -52,4 +54,5 @@
         </section>
     </main>
 </body>
+
 </html>
