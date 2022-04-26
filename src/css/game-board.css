@@ -5,6 +5,8 @@
     align-items: center;
     background-color: var(--main-color);
     z-index: 0;
+    overflow: hidden;
+    position: relative;
     
 }
 
