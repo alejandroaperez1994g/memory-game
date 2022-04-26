@@ -84,6 +84,7 @@ usernameButtons.forEach((button) => {
 
 // Function to handle button clicks, depending on page.
 function processClick (e) {
+  console.log(e)
    if (currentPage == 'difficulty') {
      difficultyPage.classList.add('hidden');
      usernamePage.classList.remove('hidden');

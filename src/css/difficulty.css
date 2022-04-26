@@ -10,30 +10,31 @@
 }
 
 .difficulty__logo {
+    position: absolute;
+    top: 3rem;
     height: 6rem;
-    margin-bottom: 2rem;
 }
 
 .difficulty__color-bar {
-    height: 16rem;
-    margin-left: 6rem;
-} 
+    transform: scale(2) translate(12rem, 6rem);
+    z-index: 0;
+}
 
 .difficulty__logo-grey {
     height: 5rem;
-    margin-top: 1rem;
-    align-self: flex-end;
-    margin-right: 1rem;
+    margin-top: 2rem;
+    margin-left: 6rem;
 }
 
 .difficulty__footer {
     width: 100%;
-    margin-top: 5rem;
+    margin-top: 3rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
+    gap: 2rem;
+    z-index: 1;
 }
 
   .button--difficulty {
