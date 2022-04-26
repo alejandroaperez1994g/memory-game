@@ -12,7 +12,7 @@ const startTimer = () => {
       //   timerSpan.textContent = `${seconds} seconds`;
       console.log(seconds);
       seconds++;
-      if (seconds > 5) {
+      if (seconds > 59) {
         minutes++;
         seconds = 1;
       }
@@ -20,7 +20,7 @@ const startTimer = () => {
       //   timerSpan.textContent = `${minutes} minutes ${seconds} seconds`;
       console.log(minutes, seconds);
       seconds++;
-      if (seconds > 5) {
+      if (seconds > 59) {
         minutes++;
         seconds = 1;
       }
