@@ -10,7 +10,7 @@
 }
 
 .difficulty__logo {
-    width: 80%;
+    height: 6rem;
     margin-bottom: 2rem;
 }
 
@@ -33,16 +33,14 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 1rem
 }
 
-  .button--difficulty{
-    color: var(--main-color);
+  .button--difficulty {
+    color: black;
     background-color: var(--secondary-color) ;
     box-shadow: inset .1rem .1rem .2rem black;
     font-weight: bold;
     font-size: 1.5rem;
     width: 60%;
     height: 3.5rem;
-
 }
