@@ -34,7 +34,7 @@
             <button class="button button--username">Add User</button>
             <button class="button button--username">Start Game</button>
         </section>
-        <section class="game">
+        <section class="game hidden">
             <img class="game__logo" src="./src/assets/img/logo_tr.svg" alt="logo of memory game">
             <article id="game_board" class="game-board">
             </article>
@@ -44,13 +44,24 @@
                 <p class="game__timer"></p>
             </div>
         </section>
-        <section class="scoreboard hidden">
-            <h2>Scoreboard</h2>
-            <article class="player">
-                <p class="player__name">Sara</p>
-                <p class="player__difficulty">Easy</p>
-                <p class="player__time">42 seconds</p>
-            </article>
+        <section class="scoreboard">
+            <div class="scoreboard__header">
+                <img class="scoreboard__logo" src="./src/assets/img/logo_tr.svg" alt="logo of memory game">
+                <div class="scoreboard__title">Scoreboard</div>
+            </div>
+            <div class="scoreboard__color-div"></div>
+            <div class="scoreboard__results">
+                <table class="player">
+                    <tr>
+                        <th class="player__name">Sara</th>
+                        <th class="player__difficulty">Easy</th>
+                        <th class="player__time">42s</th>
+                    </tr>
+                </table>
+            </div>
+            <div class="scoreboard__grad"></div>
+
+            
         </section>
     </main>
 </body>
