@@ -21,32 +21,34 @@ const getCards = () => [
   { imgSrc: "./src/assets/img/8.png", name: "python" },
 ];
 
-const shuffleCards = () => {
-  let cards = getCards();
-  cards.sort(() => Math.random() - 0.5);
+const shuffleCards = () =>{
+    let cards = getCards();
+    cards.sort(()=> Math.random() - 0.5)
+    i = 1
 
-  cards.forEach((item) => {
-    let card = document.createElement("div");
-    let front = document.createElement("img");
-    let back = document.createElement("div");
+    cards.forEach(item =>{
+        console.log(item)
+        let card = document.createElement('div');
+        let front = document.createElement('img')
+        let back = document.createElement('div')
 
-    card.classList.add("game-board__space");
-    front.classList.add("game-board__front-card");
-    back.classList.add("game-board__back-card");
+        card.classList.add('game-board__space')
+        front.classList.add('game-board__front-card')
+        back.classList.add('game-board__back-card')
 
-    card.setAttribute("name", item.name);
-    front.src = item.imgSrc;
+        card.setAttribute('name', item.name)
+        back.setAttribute('data', i);
+        front.src = item.imgSrc;
 
-    game_board.appendChild(card);
-    card.appendChild(front);
-    card.appendChild(back);
+        card.setAttribute("name", item.name);
+        front.src = item.imgSrc;
 
-    card.addEventListener("click", (e) => {
-      card.classList.add("flipCard");
-      checkCards(e);
-    });
-  });
-};
+        card.addEventListener('click', ()=>{
+            card.classList.add('flipCard')
+        })
+        i += 1;
+    })
+}
 
 shuffleCards();
 export { getCards };

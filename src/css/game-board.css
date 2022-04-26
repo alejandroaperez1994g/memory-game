@@ -1,15 +1,30 @@
 .game{
+    height: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    background-color: var(--main-color);
+    z-index: 0;
+    
 }
+
+.game__logo {
+    margin-top: 2rem;
+    width: 70%;
+}
+
 .game-board{
+    margin-top: 6rem;
     display: grid;
-    grid-template-columns: repeat(4, 4.5rem);
-    grid-template-rows: repeat(4, 4.5rem);
-    grid-column-gap: 10px;
-    grid-row-gap: 10px;
+    grid-template-columns: repeat(4, 5rem);
+    grid-template-rows: repeat(4, 5rem);
+    grid-column-gap: 1rem;
+    grid-row-gap: 1rem;
     perspective: 800px;
+    z-index: 2;
 }
+
+
 .game-board__space{
     background: white;
     display: flex;
@@ -30,6 +45,7 @@
     border-radius: 10px;
     pointer-events: none;
     transform: scaleX(-1);
+    border: solid 2px var(--main-color);
 }
 .game-board__back-card{
     width: 100%;
@@ -37,6 +53,71 @@
     backface-visibility: hidden;
 }
 
+/* .game-board__rowOne  */
+.game-board__back-card[data='1'],
+.game-board__back-card[data='2'],
+.game-board__back-card[data='3'],
+.game-board__back-card[data='4'] {
+    background-color: #FC7303;
+}
+
+/* Game Boarde  */
+.game-board__back-card[data='5'],
+.game-board__back-card[data='6'],
+.game-board__back-card[data='7'],
+.game-board__back-card[data='8'] {
+    background-color: #FE5204;
+}
+
+/* Game Boarde  */
+.game-board__back-card[data='9'],
+.game-board__back-card[data='10'],
+.game-board__back-card[data='11'],
+.game-board__back-card[data='12'] {
+    background-color: #FB0002;
+}
+
+/* Game Boarde  */
+.game-board__back-card[data='13'],
+.game-board__back-card[data='14'],
+.game-board__back-card[data='15'],
+.game-board__back-card[data='16'] {
+    background-color: #FF055D;
+}
+
 .flipCard{
     transform: rotateY(180deg) ;
+}
+.game__color-div {
+    margin-top: -18rem;
+    width: 150%;
+    height: 14rem;
+    transform: rotate(-30deg);
+    background: linear-gradient(to bottom, 
+        #FC7303 14%,  
+        #FE5204 14%, 
+        #FE5204 28%, 
+        #FB0002 28%, 
+        #FB0002 42%, 
+        #FF055D 42%,
+        #FF055D 56%,
+        #D70554 56%, 
+        #D70554 70%, 
+        #9F003F 70%, 
+        #9F003F 84%, 
+        #6A0230 84%);
+    z-index: 1;
+  
+}
+
+.game__color-bar {
+    height: 16rem;
+    margin-left: 8rem;
+    margin-top: 2rem;
+    
+}
+
+.time {
+    margin-top: 2rem;
+    outline: solid 1px black;
 }

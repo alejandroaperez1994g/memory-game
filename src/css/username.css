@@ -40,7 +40,7 @@
     margin-top: -10rem;
     font-size: 2.5rem;
     color: var(--secondary-color);
-    text-shadow: .2rem .2rem var(--main-color), .3rem .3rem var(--tertiary-color);
+    text-shadow: .1rem .2rem var(--main-color), .2rem .3rem var(--tertiary-color);
     z-index: 1;
 }
 
@@ -64,7 +64,7 @@
     font-size: 1.5rem;
     font-weight: bold;
     background-color: hsla(5, 100%, 47%, 0.7);
-    z-index: 1;    z
+    z-index: 1;    
 }
 
 /* See difficulty.css for full .button--username properties. */
