@@ -67,16 +67,20 @@ const shuffleCards = () => {
 };
 
 //Show cards for three secs
+game_board.style.pointerEvents = "none";
 start.addEventListener('click', () => {
     let nodelist = document.querySelector('#game_board').children;
     for(let i = 0; i < nodelist.length; i++){
         nodelist[i].classList.add("flipCard");
+        nodelist[i].style.pointerEvents = "none";
     }
     setTimeout(() => {
         for(let i = 0; i < nodelist.length; i++){
             nodelist[i].classList.remove("flipCard");
+            nodelist[i].style.pointerEvents = "all";
         }
     }, 3000);
+    start.disabled = true;
 });
 
 // Add event listeners to buttons on difficulty page
