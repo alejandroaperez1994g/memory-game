@@ -11,8 +11,9 @@ import {
 const game_board = document.getElementById("game_board");
 const start = document.getElementById("start");
 
-// Button variables
+// Button, input variables
 const difficultyButtons = document.querySelectorAll(".button--difficulty");
+const user_input = document.getElementById("user_input");
 const usernameButtons = document.querySelectorAll(".button--username");
 const addUserButton = document.getElementById("add_user");
 
@@ -109,23 +110,28 @@ usernameButtons.forEach((button) => {
 
 // Function to handle button clicks, depending on page.
 function processClick(e) {
-  if (e.target.id === "add_user") {
-    addUsers();
-    console.log(userList);
+  if (e.target.id === "add_user" && user_input.value) {
+      addUsers();
+      console.log(userList);
   } else if (currentPage == "difficulty") {
-    difficultyPage.classList.add("hidden");
-    usernamePage.classList.remove("hidden");
-    currentPage = "username";
+      difficultyPage.classList.add("hidden");
+      usernamePage.classList.remove("hidden");
+      currentPage = "username";
   } else if (currentPage == "username") {
     if (userList.length > 0) {
-      usernamePage.classList.add("hidden");
-      gamePage.classList.remove("hidden");
-      currentPage = "game";
-      userList[0].currentPlaying = "Current Playing";
-      addUsersToLocalStorage();
-      updateScoreboard();
+        usernamePage.classList.add("hidden");
+        gamePage.classList.remove("hidden");
+        currentPage = "game";
+        userList[0].currentPlaying = "Current Playing";
+        addUsersToLocalStorage();
+        updateScoreboard();
     } else {
-      erroMessage.classList.remove("hidden");
+        erroMessage.textContent = 'You must create a username.'
+        erroMessage.classList.remove("invisible");
+      setTimeout( () => {
+        erroMessage.classList.add("invisible");
+      }, 3000);
+      
     }
   }
 }
