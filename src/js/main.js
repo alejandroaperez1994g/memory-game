@@ -1,5 +1,6 @@
 import { checkCards, resetGame } from "./cards.js";
 import { startTimer, stopTimer } from "./timer.js";
+import { updateScoreboard } from "./score-board.js";
 import {
   addUsers,
   userList,
@@ -122,6 +123,7 @@ function processClick(e) {
       currentPage = "game";
       userList[0].currentPlaying = "Current Playing";
       addUsersToLocalStorage();
+      updateScoreboard();
     } else {
       erroMessage.classList.remove("hidden");
     }
