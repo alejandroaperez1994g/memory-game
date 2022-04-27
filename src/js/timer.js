@@ -1,4 +1,5 @@
 //get the html element thath show the timer
+const timerSpan = document.querySelector(".game__timer");
 
 // set seconds and minutes variables
 let seconds = 0;
@@ -9,7 +10,7 @@ let timer;
 const startTimer = () => {
   timer = setInterval(() => {
     if (minutes === 0) {
-      //   timerSpan.textContent = `${seconds} seconds`;
+      timerSpan.textContent = `${seconds} seconds`;
       console.log(seconds);
       seconds++;
       if (seconds > 59) {
@@ -17,7 +18,7 @@ const startTimer = () => {
         seconds = 1;
       }
     } else {
-      //   timerSpan.textContent = `${minutes} minutes ${seconds} seconds`;
+      timerSpan.textContent = `${minutes} minutes ${seconds} seconds`;
       console.log(minutes, seconds);
       seconds++;
       if (seconds > 59) {

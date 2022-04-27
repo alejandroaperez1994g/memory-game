@@ -1,4 +1,5 @@
 import { getCards, shuffleCards } from "./main.js";
+import { stopTimer } from "./timer.js";
 
 const checkCards = (e) => {
   let flipCard = e.target;
@@ -17,6 +18,7 @@ const checkCards = (e) => {
   }
   if (matchedCards.length === 16) {
     setTimeout(() => {
+      stopTimer();
       resetGame();
     }, 1000);
   }
