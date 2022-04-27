@@ -1,7 +1,7 @@
 .difficulty{
     
     font-family: 'Montserrat', sans-serif;
-    height: 100%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -20,10 +20,6 @@
 .difficulty__color-bar {
     transform: scale(2) translate(12rem, 6rem);
     z-index: 0;
-}
-
-.difficulty__color-div {
-    display: none;
 }
 
 .difficulty__logo-grey {
@@ -49,39 +45,32 @@
     height: 3.5rem;
 }
 
-
-@media screen and (min-width: 800px) {
-
-    .difficulty{
-        height: 100%;
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        grid-template-rows: repeat(6, 1fr);
-    }
+@media screen and (min-width: 700px) and (max-width: 999px) {    
 
     .difficulty__logo {
-        grid-area: 1 / 2 / 2 / 3;
-        height: 14vh;
-        margin-top: 20%;
-        margin-left: -10%;
+        flex: 0 auto;
+        height: 12%;
+        margin-top: 10vh;
+        margin-right: 16vh
     }
 
     .difficulty__logo-grey {
-        grid-area: 2 / 2 / 3 / 3;
-        height: 8vh;
-        margin-top: 55%;
-        z-index: 1;
+        height: 6%;
+        margin-right: 32vh;
+        margin-top: 20vh;
+        
     }
 
     .difficulty__color-bar {
         display: none;
     }
 
-    .difficulty__color-div {
-        display: block;
-        grid-area: 1 / 1 / -1 / -1;
+    .difficulty__color-div {        
+        position: absolute;
+        right: 0;
+        left: 0;
         height: 25vh;
-        transform: skewY(-40deg);
+        transform: skewY(-35deg);
         background: linear-gradient(to bottom,
             #FC7303 14%,  
             #FE5204 14%, 
@@ -99,22 +88,75 @@
     }
 
     .difficulty__footer {
-        grid-area: 5 / 3 / 6 / 5;
-        margin-left: 10%;
+        flex: 0 auto;
         display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 2rem;
-        z-index: 1;
+        margin-top: 36vh;
+        margin-left: 20vh;
     }
 
       .button--difficulty {
         font-size: 3rem;
-        width: minmax(20vh, 50%);
+        min-width: 25rem;
+        max-width: 10%;
         height: 4rem;
-        padding: 0.2rem;
+    }
+}
 
+@media screen and (min-width: 1000px) {    
+
+    .difficulty__logo {
+        flex: 0 auto;
+        height: 16%;
+        margin-top: 10vh;
+        margin-right: 85vh;
+    }
+
+    .difficulty__logo-grey {
+        height: 10%;
+        margin-right: 80vh;
+        margin-top: 15vh;
+    }
+
+    .difficulty__color-bar {
+        display: none;
+    }
+
+    .difficulty__color-div {
+        position: absolute;
+        right: 0;
+        left: 0;
+        height: 25vh;
+        transform: skewY(-35deg);
+        background: linear-gradient(to bottom,
+            #FC7303 14%,  
+            #FE5204 14%, 
+            #FE5204 28%, 
+            #FB0002 28%, 
+            #FB0002 42%, 
+            #FF055D 42%,
+            #FF055D 56%,
+            #D70554 56%, 
+            #D70554 70%, 
+            #9F003F 70%, 
+            #9F003F 84%, 
+            #6A0230 84%);   
+        z-index: 0;
+    }
+
+    .difficulty__footer {
+        flex: 0 auto;
+        display: flex;
+        flex-direction: column;
+        margin-top: 15vh;
+        margin-left: 50vh;
+    }
+
+      .button--difficulty {
+        font-size: 3rem;
+        min-width: 25rem;
+        max-width: 10%;
+        height: 4rem;
     }
 
 }
