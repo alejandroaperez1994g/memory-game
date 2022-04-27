@@ -13,26 +13,31 @@
     margin: 1rem 2rem;
     height: 10%;
     display: flex;
-    gap: 1rem;
+    flex-direction: column;
+    gap: 2rem;
     align-items: center;
     justify-content: center;
 }
 
 .scoreboard__logo {
-    width: 35%;
+    margin-top: 2rem;
+    width: 38%;
 }
 
 .scoreboard__title {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: bold;
     text-shadow: .1rem .1rem var(--secondary-color);
-    ;}
-
-
+    font-family: 'Press Start 2P', cursive;
+}
 
 .scoreboard__color-div {    
-    width: 100%;
-    height: 8vh;    
+    position: absolute;
+    top: 34vh;
+    right: 0;
+    left: 0;
+    height: 30vh;
+    transform: skewY(-35deg);
     background: linear-gradient(to bottom, 
         #FC7303 14%,  
         #FE5204 14%, 
@@ -48,12 +53,12 @@
         #6A0230 84%);
 }
 
+
 .scoreboard__results {
-    margin-top: -10%;
     display: flex;
     flex-direction: column;
-    width: 80%;
-    height: 60%;
+    width: 80vw;
+    height: 60vh;
     margin-top: 2rem;
     display: flex;
     flex-direction: column;
@@ -64,9 +69,8 @@
     box-shadow: 0.75rem 0.75rem var(--blue-highlight);;
     background-color: white;
     z-index: 1;
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     font-family: 'Press Start 2P', cursive;
-    font: 'Press Start 2P';
 }
 
 .player {
@@ -74,20 +78,15 @@
     text-align: left;
     width: 100%;
     margin: 1rem;
-    font-family: 'Press Start 2P', cursive;
 }
 
 .player__name {
-    width: 30%;
-}
-
-.player__difficulty {
-    width:25%;
+    width: 40%;
 }
 
 .player__time {
     padding-left: 1rem;
-    width: 45%;
+    width: 60%;
 }
 
 .scoreboard__play-again {
@@ -113,27 +112,42 @@
 
 
 @media screen and (min-width: 800px) {
+
     .scoreboard__logo {
-        width: 14;
+        margin-top: 3rem;
+        width: 40%;
     }
-    
-    .scoreboard__color-div {
-        height: 10vh;
+
+    .scoreboard__header {
+        flex-direction: row;
+        align-items: center;
+        gap: 3rem;
+        margin-bottom: 4rem;
     }
 
     .scoreboard__title {
-        font-size: 4rem;
+        margin-top: 3rem;
+        font-size: 3rem;
         font-weight: bold;
         text-shadow: .1rem .1rem var(--secondary-color);
-        align-self: center;
+        z-index: 1;
     }
 
     .scoreboard__results {
         font-size: 1.4rem;
-        width: 70vw;
+        width: 80vw;
     }
 
     .button--play-again {
-        max-width: 30vw;
+        min-width: 20rem;
+        max-width: 26rem;
+        height: 4rem;
     }
 };
+
+@media screen and (min-width: 1200px) {
+
+    .scoreboard__results {
+        font-size: 2rem;;
+    }
+}

@@ -35,7 +35,7 @@
             <button id='add_user' class="button button--username button--add-user">Add User</button>
             <button id="start_game" class="button button--username button--start-game">Start Game</button>
         </section>
-        <section class="game">
+        <section class="game hidden">
             <img class="game__logo" src="./src/assets/img/logo_tr.svg" alt="logo of memory game">
             <article id="game_board" class="game-board">
             </article>
@@ -48,7 +48,7 @@
                 </div>
             </div>
         </section>
-        <section class="scoreboard hidden">
+        <section class="scoreboard">
             <div class="scoreboard__header">
                 <img class="scoreboard__logo" src="./src/assets/img/logo_tr.svg" alt="logo of memory game">
                 <div class="scoreboard__title">Scoreboard</div>
@@ -58,7 +58,6 @@
                 <table id="player__results" class="player">
                     <tr>
                         <th class="player__table-header">Player:</th>
-                        <th class="player__table-header">Level:</th>
                         <th class="player__table-header">Time:</th>
                     </tr>
                 </table>
