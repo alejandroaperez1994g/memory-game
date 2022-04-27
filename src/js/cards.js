@@ -1,6 +1,7 @@
 import { getCards, shuffleCards } from "./main.js";
 import { stopTimer, resetTime } from "./timer.js";
 import { nextPlayer } from "./users.js";
+import { updateScoreboard } from "./score-board.js";
 
 const start = document.getElementById("start");
 
@@ -23,6 +24,7 @@ const checkCards = (e) => {
     setTimeout(() => {
       stopTimer();
       nextPlayer();
+      updateScoreboard();
       resetGame();
     }, 2000);
   }
