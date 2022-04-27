@@ -15,6 +15,8 @@ const start = document.getElementById("start");
 const difficultyButtons = document.querySelectorAll(".button--difficulty");
 const usernameButtons = document.querySelectorAll(".button--username");
 const addUserButton = document.getElementById("add_user");
+const playAgain = document.getElementById("button--play-again");
+const scoreboardResults = document.getElementById("scoreboard_section");
 
 // Page variables
 const difficultyPage = document.querySelector(".difficulty");
@@ -91,6 +93,12 @@ start.addEventListener("click", () => {
     startTimer();
   }, 3000);
   start.disabled = true;
+});
+
+//---
+playAgain.addEventListener('click', () => {
+  difficultyPage.classList.remove("hidden");
+  scoreboardResults.classList.add("hidden");
 });
 
 // Add event listeners to buttons on difficulty page
