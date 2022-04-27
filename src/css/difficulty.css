@@ -20,8 +20,12 @@
     z-index: 0;
 }
 
+.difficulty__color-div {
+    display: none;
+}
+
 .difficulty__logo-grey {
-    height: 5rem;
+    height: 4rem;
     margin-top: 2rem;
     margin-left: 6rem;
 }
@@ -38,11 +42,91 @@
 }
 
   .button--difficulty {
-    color: black;
-    background-color: var(--secondary-color) ;
-    box-shadow: inset .1rem .1rem .2rem black;
+    color: var(--main-color);
+    font-style: italic;
+    background-color: black;
+    box-shadow: inset .2rem .2rem .2rem var(--secondary-color);
+    border: solid 0.25rem var(--secondary-color);
+    border-radius: 1rem;
     font-weight: bold;
-    font-size: 1.5rem;
-    width: 60%;
+    font-size: 2rem;
+    width: 50%;
     height: 3.5rem;
+}
+
+
+
+@media screen and (min-width: 800px) {
+
+    .difficulty{
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+    }
+
+    .difficulty__logo {
+        grid-area: 1 / 2 / 2 / 3;
+        height: 14vh;
+        margin-top: 20%;
+        margin-left: -10%;
+    }
+
+    .difficulty__logo-grey {
+        grid-area: 2 / 2 / 3 / 3;
+        height: 8vh;
+        margin-top: 55%;
+        margin-left: 20%;
+        z-index: 1;
+        
+    }
+
+    .difficulty__color-bar {
+        display: none;
+    }
+
+    .difficulty__color-div {
+        display: block;
+        grid-area: 1 / 1 / -1 / -1;
+        height: 25vh;
+        transform: skewY(-40deg);
+        background: linear-gradient(to bottom,
+            #FC7303 14%,  
+            #FE5204 14%, 
+            #FE5204 28%, 
+            #FB0002 28%, 
+            #FB0002 42%, 
+            #FF055D 42%,
+            #FF055D 56%,
+            #D70554 56%, 
+            #D70554 70%, 
+            #9F003F 70%, 
+            #9F003F 84%, 
+            #6A0230 84%);   
+        z-index: 0;
+    }
+
+    .difficulty__footer {
+        grid-area: 5 / 3 / 6 / 5;
+        margin-left: 10%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        z-index: 1;
+    }
+      .button--difficulty {
+        color: var(--main-color);
+        font-style: italic;
+        background-color: black;
+        box-shadow: inset .3rem .3rem .3rem var(--secondary-color);
+        border: solid 0.5rem var(--secondary-color);
+        border-radius: 1rem;
+        font-weight: bold;
+        font-size: 3vh;
+        width: minmax(20vh, 50%);
+        height: 100%;
+    }
+
 }
