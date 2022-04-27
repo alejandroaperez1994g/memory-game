@@ -1,8 +1,11 @@
 import { getLocalStorage } from "./score-board.js";
+import { updateScoreboard } from "./score-board.js";
 
 const user_input = document.getElementById("user_input");
 const startGameButton = document.getElementById("start_game");
 const timerSpan = document.querySelector(".game__timer");
+const game_section = document.getElementById("game_section");
+const scoreboard_section = document.getElementById("scoreboard_section");
 
 let currentPlayer = 1;
 let userList = [];
@@ -22,6 +25,9 @@ const nextPlayer = () => {
     userList[currentPlayer - 1].currentPlaying = "";
     userList[currentPlayer - 1].score = timerSpan.textContent;
     addUsersToLocalStorage();
+    updateScoreboard();
+    game_section.classList.add("hidden");
+    scoreboard_section.classList.remove("hidden");
     console.log("Game Over");
   } else {
     userList[currentPlayer - 1].currentPlaying = "";
