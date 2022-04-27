@@ -41,19 +41,11 @@
     z-index: 1;
 }
 
-  .button--difficulty {
-    color: var(--main-color);
-    font-style: italic;
-    background-color: black;
-    box-shadow: inset .2rem .2rem .2rem var(--secondary-color);
-    border: solid 0.25rem var(--secondary-color);
-    border-radius: 1rem;
-    font-weight: bold;
+  .button--difficulty {    
     font-size: 2rem;
     width: 50%;
     height: 3.5rem;
 }
-
 
 
 @media screen and (min-width: 800px) {
@@ -76,9 +68,7 @@
         grid-area: 2 / 2 / 3 / 3;
         height: 8vh;
         margin-top: 55%;
-        margin-left: 20%;
         z-index: 1;
-        
     }
 
     .difficulty__color-bar {
@@ -116,17 +106,11 @@
         gap: 2rem;
         z-index: 1;
     }
+
       .button--difficulty {
-        color: var(--main-color);
-        font-style: italic;
-        background-color: black;
-        box-shadow: inset .3rem .3rem .3rem var(--secondary-color);
-        border: solid 0.5rem var(--secondary-color);
-        border-radius: 1rem;
-        font-weight: bold;
-        font-size: 3vh;
+        font-size: 3rem;
         width: minmax(20vh, 50%);
-        height: 100%;
+
     }
 
 }
