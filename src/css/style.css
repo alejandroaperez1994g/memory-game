@@ -15,6 +15,9 @@
     --secondary-color: #37A082;
     --tertiary-color: #EF1300;
     --quaternary-color: #FFAAA7;
+    --yellow-highlight: #FFBC1E;
+    --blue-highlight: #18A3B2;
+
 }
 
 body {
@@ -31,6 +34,16 @@ body {
     flex-direction: column;
 }
 
+.button {
+    border: solid 0.2rem var(--blue-highlight);
+    border-radius: 0.5rem;
+    color: var(--main-color);
+    background-color: black;
+    font-weight: bold;
+    font-style: italic;
+    z-index: 1;
+}
+
 .game__card {
     height: 5rem;
 }
@@ -38,4 +51,6 @@ body {
 .hidden {
     display: none;
 }
+
+
 

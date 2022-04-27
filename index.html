@@ -12,27 +12,29 @@
 
 <body>
     <main class="game-all ">
-        <section class="difficulty">
+        <section class="difficulty hidden">
             <img class="difficulty__logo" src="./src/assets/img/logo_tr.svg" alt="logo of memory game">
             <img src="./src/assets/img/color-bars3.png" alt="Color" class="difficulty__color-bar">
             <img src="./src/assets/img/logo-grey.svg" alt="logo for programming languages"
                 class="difficulty__logo-grey">
+            <div class="difficulty__color-div"></div>
+            </div>
             <div class="difficulty__footer">
                 <button class="button button--difficulty">Easy</button>
                 <button class="button button--difficulty">Medium</button>
                 <button class="button button--difficulty">Hard</button>
             </div>
         </section>
-        <section class="username hidden">
+        <section class="username">
             <img class="username__logo" src="./src/assets/img/logo_tr.svg" alt="logo of memory game">
             <div class="username__color-div"></div>
             <h3 class="username__heading">Add User</h3>
-            <input type="text" class="username__input">
-            <div class="username__message-div">
-                <p class="username__message">Message</p>
+            <input id="user_input" type="text" class="username__input" placeholder="User name">
+            <div id="error_message" class="username__message-div hidden">
+                <p class="username__message">Add Users</p>
             </div>
-            <button class="button button--username">Add User</button>
-            <button class="button button--username">Start Game</button>
+            <button id='add_user' class="button button--username">Add User</button>
+            <button id="start_game" class="button button--username">Start Game</button>
         </section>
         <section class="game hidden">
             <img class="game__logo" src="./src/assets/img/logo_tr.svg" alt="logo of memory game">
@@ -54,7 +56,7 @@
             </div>
             <div class="scoreboard__color-div"></div>
             <div class="scoreboard__results">
-                <table class="player">
+                <table id="player__results" class="player">
                     <tr>
                         <th class="player__name">Sara</th>
                         <th class="player__difficulty">Easy</th>

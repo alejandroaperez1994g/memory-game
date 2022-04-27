@@ -1,20 +1,23 @@
 import { checkCards, resetGame } from "./cards.js";
 import { startTimer, stopTimer } from "./timer.js";
+import { addUsers, userList, addUsersToLocalStorage } from "./users.js";
 
 const game_board = document.getElementById("game_board");
 const start = document.getElementById("start");
 
 // Button variables
-const difficultyButtons = document.querySelectorAll('.button--difficulty');
-const usernameButtons = document.querySelectorAll('.button--username');
+const difficultyButtons = document.querySelectorAll(".button--difficulty");
+const usernameButtons = document.querySelectorAll(".button--username");
+const addUserButton = document.getElementById("add_user");
 
 // Page variables
-const difficultyPage = document.querySelector('.difficulty');
-const usernamePage = document.querySelector('.username');
-const gamePage = document.querySelector('.game');
+const difficultyPage = document.querySelector(".difficulty");
+const usernamePage = document.querySelector(".username");
+const gamePage = document.querySelector(".game");
+const erroMessage = document.getElementById("error_message");
+const startGameSessionButton = document.getElementById("startGameSession");
 
-
-let currentPage = 'difficulty';
+let currentPage = "difficulty";
 
 const getCards = () => [
   { imgSrc: "./src/assets/img/1.png", name: "c#" },
@@ -68,48 +71,55 @@ const shuffleCards = () => {
 
 //Show cards for three secs
 game_board.style.pointerEvents = "none";
-start.addEventListener('click', () => {
-    let nodelist = document.querySelector('#game_board').children;
-    for(let i = 0; i < nodelist.length; i++){
-        nodelist[i].classList.add("flipCard");
-        nodelist[i].style.pointerEvents = "none";
+start.addEventListener("click", () => {
+  let nodelist = document.querySelector("#game_board").children;
+  for (let i = 0; i < nodelist.length; i++) {
+    nodelist[i].classList.add("flipCard");
+    nodelist[i].style.pointerEvents = "none";
+  }
+  setTimeout(() => {
+    for (let i = 0; i < nodelist.length; i++) {
+      nodelist[i].classList.remove("flipCard");
+      nodelist[i].style.pointerEvents = "all";
     }
-    setTimeout(() => {
-        for(let i = 0; i < nodelist.length; i++){
-            nodelist[i].classList.remove("flipCard");
-            nodelist[i].style.pointerEvents = "all";
-        }
-    }, 3000);
-    start.disabled = true;
+  }, 3000);
+  start.disabled = true;
 });
 
 // Add event listeners to buttons on difficulty page
 difficultyButtons.forEach((button) => {
-  button.addEventListener('click', (e) => {
+  button.addEventListener("click", (e) => {
     processClick(e);
   });
 });
 
 // Add event listeners to buttons on difficulty page
 usernameButtons.forEach((button) => {
-  button.addEventListener('click', (e) => {
-  processClick(e);
+  button.addEventListener("click", (e) => {
+    processClick(e);
   });
 });
 
 // Function to handle button clicks, depending on page.
-function processClick (e) {
-  console.log(e)
-   if (currentPage == 'difficulty') {
-     difficultyPage.classList.add('hidden');
-     usernamePage.classList.remove('hidden');
-     currentPage = 'username';
-   } else if (currentPage == 'username') {
-    usernamePage.classList.add('hidden');
-    gamePage.classList.remove('hidden');
-    currentPage = 'game';
-   }
-   
+function processClick(e) {
+  console.log(e.target.id);
+  if (e.target.id === "add_user") {
+    addUsers();
+    console.log(userList);
+  } else if (currentPage == "difficulty") {
+    difficultyPage.classList.add("hidden");
+    usernamePage.classList.remove("hidden");
+    currentPage = "username";
+  } else if (currentPage == "username") {
+    if (userList.length > 0) {
+      usernamePage.classList.add("hidden");
+      gamePage.classList.remove("hidden");
+      currentPage = "game";
+      addUsersToLocalStorage();
+    } else {
+      erroMessage.classList.remove("hidden");
+    }
+  }
 }
 
 shuffleCards();
