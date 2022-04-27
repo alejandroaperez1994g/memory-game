@@ -12,7 +12,7 @@
 
 <body>
     <main class="game-all ">
-        <section class="difficulty hidden">
+        <section class="difficulty">
             <img class="difficulty__logo" src="./src/assets/img/logo_tr.svg" alt="logo of memory game">
             <img src="./src/assets/img/color-bars3.png" alt="Color" class="difficulty__color-bar">
             <img src="./src/assets/img/logo-grey.svg" alt="logo for programming languages"
@@ -35,7 +35,7 @@
             <button id='add_user' class="button button--username button--add-user">Add User</button>
             <button id="start_game" class="button button--username button--start-game">Start Game</button>
         </section>
-        <section class="game">
+        <section id="game_section" class="game hidden">
             <img class="game__logo" src="./src/assets/img/logo_tr.svg" alt="logo of memory game">
             <article id="game_board" class="game-board">
             </article>
@@ -48,7 +48,7 @@
                 </div>
             </div>
         </section>
-        <section class="scoreboard hidden">
+        <section id='scoreboard_section' class="scoreboard hidden">
             <div class="scoreboard__header">
                 <img class="scoreboard__logo" src="./src/assets/img/logo_tr.svg" alt="logo of memory game">
                 <div class="scoreboard__title">Scoreboard</div>
@@ -58,8 +58,8 @@
                 <table id="player__results" class="player">
                     <tr>
                         <th class="player__table-header">Player:</th>
-                        <th class="player__table-header">Level:</th>
                         <th class="player__table-header">Time:</th>
+                        <th class="player__table-header">Level:</th>
                     </tr>
                 </table>
             </div>
@@ -69,4 +69,5 @@
         </section>
     </main>
 </body>
+
 </html>
