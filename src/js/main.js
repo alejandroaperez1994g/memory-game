@@ -1,19 +1,21 @@
 import { checkCards, resetGame } from "./cards.js";
 import { startTimer, stopTimer } from "./timer.js";
+import { addUsers, userList } from "./users.js";
 
 const game_board = document.getElementById("game_board");
 
 // Button variables
-const difficultyButtons = document.querySelectorAll('.button--difficulty');
-const usernameButtons = document.querySelectorAll('.button--username');
+const difficultyButtons = document.querySelectorAll(".button--difficulty");
+const usernameButtons = document.querySelectorAll(".button--username");
+const addUserButton = document.getElementById("add_user");
 
 // Page variables
-const difficultyPage = document.querySelector('.difficulty');
-const usernamePage = document.querySelector('.username');
-const gamePage = document.querySelector('.game');
+const difficultyPage = document.querySelector(".difficulty");
+const usernamePage = document.querySelector(".username");
+const gamePage = document.querySelector(".game");
+const erroMessage = document.getElementById("error_message");
 
-
-let currentPage = 'difficulty';
+let currentPage = "difficulty";
 
 const getCards = () => [
   { imgSrc: "./src/assets/img/1.png", name: "c#" },
@@ -70,29 +72,35 @@ export { getCards, shuffleCards };
 
 // Add event listeners to buttons on difficulty page
 difficultyButtons.forEach((button) => {
-  button.addEventListener('click', (e) => {
+  button.addEventListener("click", (e) => {
     processClick(e);
   });
 });
 
 // Add event listeners to buttons on difficulty page
 usernameButtons.forEach((button) => {
-  button.addEventListener('click', (e) => {
-  processClick(e);
+  button.addEventListener("click", (e) => {
+    processClick(e);
   });
 });
 
 // Function to handle button clicks, depending on page.
-function processClick (e) {
-  console.log(e)
-   if (currentPage == 'difficulty') {
-     difficultyPage.classList.add('hidden');
-     usernamePage.classList.remove('hidden');
-     currentPage = 'username';
-   } else if (currentPage == 'username') {
-    usernamePage.classList.add('hidden');
-    gamePage.classList.remove('hidden');
-    currentPage = 'game';
-   }
-   
+function processClick(e) {
+  console.log(e.target.id);
+  if (e.target.id === "add_user") {
+    addUsers();
+    console.log(userList);
+  } else if (currentPage == "difficulty") {
+    difficultyPage.classList.add("hidden");
+    usernamePage.classList.remove("hidden");
+    currentPage = "username";
+  } else if (currentPage == "username") {
+    if (userList.length > 0) {
+      usernamePage.classList.add("hidden");
+      gamePage.classList.remove("hidden");
+      currentPage = "game";
+    } else {
+      erroMessage.classList.remove("hidden");
+    }
+  }
 }
