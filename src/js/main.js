@@ -94,6 +94,15 @@ start.addEventListener("click", () => {
   start.disabled = true;
 });
 
+//---
+
+const playAgain = document.getElementById("button--play-again");
+const scoreboardResults = document.getElementById("scoreboard_section");
+playAgain.addEventListener('click', () => {
+  difficultyPage.classList.remove("hidden");
+  scoreboardResults.classList.add("hidden");
+});
+
 // Add event listeners to buttons on difficulty page
 difficultyButtons.forEach((button) => {
   button.addEventListener("click", (e) => {
