@@ -11,7 +11,7 @@ const startTimer = () => {
   timer = setInterval(() => {
     if (minutes === 0) {
       timerSpan.textContent = `${seconds} seconds`;
-      console.log(seconds);
+
       seconds++;
       if (seconds > 59) {
         minutes++;
@@ -19,7 +19,7 @@ const startTimer = () => {
       }
     } else {
       timerSpan.textContent = `${minutes} minutes ${seconds} seconds`;
-      console.log(minutes, seconds);
+
       seconds++;
       if (seconds > 59) {
         minutes++;
@@ -35,4 +35,8 @@ const stopTimer = () => {
   minutes = 0;
 };
 
-export { startTimer, stopTimer };
+const resetTime = () => {
+  timerSpan.textContent = "";
+};
+
+export { startTimer, stopTimer, resetTime };

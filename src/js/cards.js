@@ -1,5 +1,8 @@
 import { getCards, shuffleCards } from "./main.js";
-import { stopTimer } from "./timer.js";
+import { stopTimer, resetTime } from "./timer.js";
+import { nextPlayer } from "./users.js";
+
+const start = document.getElementById("start");
 
 const checkCards = (e) => {
   let flipCard = e.target;
@@ -19,8 +22,9 @@ const checkCards = (e) => {
   if (matchedCards.length === 16) {
     setTimeout(() => {
       stopTimer();
+      nextPlayer();
       resetGame();
-    }, 1000);
+    }, 2000);
   }
 };
 
@@ -65,6 +69,8 @@ const resetGame = () => {
     game_board.removeChild(game_board.lastChild);
   }
   shuffleCards();
+  resetTime();
+  start.disabled = false;
 };
 
 export { checkCards, resetGame };

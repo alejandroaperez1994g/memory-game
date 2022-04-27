@@ -92,7 +92,6 @@ start.addEventListener("click", () => {
   start.disabled = true;
 });
 
-
 // Add event listeners to buttons on difficulty page
 difficultyButtons.forEach((button) => {
   button.addEventListener("click", (e) => {
@@ -109,7 +108,6 @@ usernameButtons.forEach((button) => {
 
 // Function to handle button clicks, depending on page.
 function processClick(e) {
-  console.log(e.target.id);
   if (e.target.id === "add_user") {
     addUsers();
     console.log(userList);
@@ -122,6 +120,7 @@ function processClick(e) {
       usernamePage.classList.add("hidden");
       gamePage.classList.remove("hidden");
       currentPage = "game";
+      userList[0].currentPlaying = "Current Playing";
       addUsersToLocalStorage();
     } else {
       erroMessage.classList.remove("hidden");
