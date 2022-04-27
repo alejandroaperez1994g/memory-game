@@ -1,6 +1,11 @@
 import { checkCards, resetGame } from "./cards.js";
 import { startTimer, stopTimer } from "./timer.js";
-import { addUsers, userList, addUsersToLocalStorage } from "./users.js";
+import {
+  addUsers,
+  userList,
+  addUsersToLocalStorage,
+  nextPlayer,
+} from "./users.js";
 
 const game_board = document.getElementById("game_board");
 const start = document.getElementById("start");
