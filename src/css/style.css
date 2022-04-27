@@ -3,11 +3,11 @@
 @import url('game-board.css');
 @import url('scoreboard.css');
 
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
 }
 
 :root{
@@ -35,7 +35,7 @@ body {
 }
 
 .button {
-    border: solid 0.25rem var(--blue-highlight);
+    border: solid 0.3rem var(--blue-highlight);
     border-radius: 0.5rem;
     color: var(--main-color);
     background-color: black;

@@ -1,4 +1,6 @@
 .difficulty{
+    
+    font-family: 'Montserrat', sans-serif;
     height: 100%;
     display: flex;
     flex-direction: column;

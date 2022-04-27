@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 .scoreboard {
     height: 100%;
     display: flex;
@@ -13,6 +15,7 @@
     display: flex;
     gap: 1rem;
     align-items: center;
+    justify-content: center;
 }
 
 .scoreboard__logo {
@@ -27,10 +30,9 @@
 
 
 
-.scoreboard__color-div {
-    
+.scoreboard__color-div {    
     width: 100%;
-    height: 5rem;    
+    height: 8vh;    
     background: linear-gradient(to bottom, 
         #FC7303 14%,  
         #FE5204 14%, 
@@ -47,18 +49,25 @@
 }
 
 .scoreboard__results {
+    margin-top: -10%;
+    font-family: ;
     display: flex;
     flex-direction: column;
     width: 80%;
-    height: 80%;
+    height: 60%;
     margin-top: 2rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     box-sizing: border-box;
     outline: solid 3px var(--secondary-color);
+    border-radius: 2rem;
+    box-shadow: 0.75rem 0.75rem var(--blue-highlight);;
     background-color: white;
     z-index: 1;
+    font-size: 0.7rem;
+    font-family: 'Press Start 2P', cursive;
+    font: 'Press Start 2P';
 }
 
 .player {
@@ -66,6 +75,7 @@
     text-align: left;
     width: 100%;
     margin: 1rem;
+    font-family: 'Press Start 2P', cursive;
 }
 
 .player__name {
@@ -81,12 +91,50 @@
     width: 45%;
 }
 
-.scoreboard__grad {
-    margin-top: 1rem;
-    height: 15%;    
+.scoreboard__play-again {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+    height: 10vh;
     width: 100%;
-    justify-content: flex-end;
-    background: linear-gradient(to bottom, var(--main-color) 30%, var(--secondary-color));
-    opacity: 0.8;
-    
 }
+
+.button--play-again {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1rem;
+    width: 60%;
+    height: 3.5rem;
+}
+
+.button--play-again:hover {
+    text-shadow: 0.1rem 0.1rem var(--yellow-highlight);
+    transform: scale(1.1);
+}
+
+
+@media screen and (min-width: 800px) {
+    .scoreboard__logo {
+        width: 14;
+    }
+    
+    .scoreboard__color-div {
+        height: 10vh;
+    }
+
+    .scoreboard__title {
+        font-size: 4rem;
+        font-weight: bold;
+        text-shadow: .1rem .1rem var(--secondary-color);
+        align-self: center;
+    }
+
+    .scoreboard__results {
+        font-size: 1.4rem;
+        width: 70vw;
+    }
+
+    .button--play-again {
+        max-width: 30vw;
+    }
+};
