@@ -1,6 +1,6 @@
 import { checkCards, resetGame } from "./cards.js";
 import { startTimer, stopTimer } from "./timer.js";
-import { addUsers, userList } from "./users.js";
+import { addUsers, userList, addUsersToLocalStorage } from "./users.js";
 
 const game_board = document.getElementById("game_board");
 
@@ -14,6 +14,7 @@ const difficultyPage = document.querySelector(".difficulty");
 const usernamePage = document.querySelector(".username");
 const gamePage = document.querySelector(".game");
 const erroMessage = document.getElementById("error_message");
+const startGameSessionButton = document.getElementById("startGameSession");
 
 let currentPage = "difficulty";
 
@@ -99,6 +100,7 @@ function processClick(e) {
       usernamePage.classList.add("hidden");
       gamePage.classList.remove("hidden");
       currentPage = "game";
+      addUsersToLocalStorage();
     } else {
       erroMessage.classList.remove("hidden");
     }
