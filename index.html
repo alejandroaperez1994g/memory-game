@@ -27,12 +27,12 @@
             <img class="username__logo" src="./src/assets/img/logo_tr.svg" alt="logo of memory game">
             <div class="username__color-div"></div>
             <h3 class="username__heading">Add User</h3>
-            <input type="text" class="username__input">
-            <div class="username__message-div">
-                <p class="username__message">Message</p>
+            <input id="user_input" type="text" class="username__input" placeholder="User name">
+            <div id="error_message" class="username__message-div hidden">
+                <p class="username__message">Add Users</p>
             </div>
-            <button class="button button--username">Add User</button>
-            <button class="button button--username">Start Game</button>
+            <button id='add_user' class="button button--username">Add User</button>
+            <button id="start_game" class="button button--username">Start Game</button>
         </section>
         <section class="game hidden">
             <img class="game__logo" src="./src/assets/img/logo_tr.svg" alt="logo of memory game">
