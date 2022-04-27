@@ -16,9 +16,9 @@
 }
 
 .username__color-div {
-    width: 150%;
+    width: 100%;
     height: 14rem;
-    transform: rotate(-30deg);
+    transform: skewY(-30deg);
     background: linear-gradient(to bottom, 
         #FC7303 14%,  
         #FE5204 14%, 
@@ -32,7 +32,6 @@
         #9F003F 70%, 
         #9F003F 84%, 
         #6A0230 84%);
-  
 }
 
 .username__heading {
@@ -62,8 +61,9 @@
     color: var(--main-color);
     font-size: 1.5rem;
     font-weight: bold;
-    background-color: hsla(5, 100%, 47%, 0.7);
-    z-index: 1;    
+    background-color: hsla(163, 49%, 42%, 0.75);
+    z-index: 0;    
+    display: none;
 }
 
 /* See difficulty.css for full .button--username properties. */
@@ -73,7 +73,73 @@
     background-color: black;
     box-shadow: inset .2rem .2rem var(--secondary-color);
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 2rem;
     width: 60%;
     height: 3.5rem;
 }
+
+  
+
+
+
+@media screen and (min-width: 800px) {
+
+    .username {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(8, 1fr);
+        align-items: center;
+        justify-items: center;
+    }
+
+    .username__logo {
+        grid-area: 2 / 2 / 3 / 3;
+        width: 20vw;
+        margin-top: 30%;
+        margin-right: 10%;
+        
+    }
+
+    .username__color-div {
+        grid-area: 1 / 1 / -1 / -1;
+        height: 25vh;
+        transform: skewY(-40deg);
+    }
+
+    .username__heading  {
+        grid-area: 3 / 2 / 4 / 5;
+        font-size: 4rem;
+        margin-top: -10%;
+        text-shadow: .3rem .3rem var(--main-color), .3rem .4rem var(--tertiary-color);
+    }
+
+    .username__input {
+        grid-area: 4 / 2 / 5 / 5;
+        height: 4rem;
+        text-align: left(2px);
+        font-size: 3rem;
+        font-weight: bold;
+
+    }
+
+    .username__message-div {
+        grid-area: 5 / 2 / 6 / 5;
+        height: 10vh;
+        font-size: 3rem;
+    }
+
+      .button--username {
+        grid-area: 6 / 3 / 7 / 5;
+        font-size: 3rem;
+        margin-left: 50%;        
+        width: 20rem;
+
+    }
+
+    .button--username:first-of-type {
+        margin-left: -75%;
+    }
+
+    .button--username:nth-of-type(2n) {
+        margin-left: 80%;;
+    }
