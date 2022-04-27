@@ -9,7 +9,7 @@ const getScoreboard = () => {
     let thElementCurrent = document.createElement("th");
 
     thElementName.textContent = users.name;
-    thElementTime.textContent = users.time;
+    thElementTime.textContent = users.score;
     thElementCurrent.textContent = users.currentPlaying;
     trElement.appendChild(thElementName);
     trElement.appendChild(thElementTime);
@@ -29,4 +29,4 @@ const updateScoreboard = () => {
   getScoreboard();
 };
 
-export { getLocalStorage };
+export { getLocalStorage, updateScoreboard };
