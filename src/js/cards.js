@@ -1,4 +1,5 @@
 import { getCards, shuffleCards } from "./main.js";
+import { nextPlayer } from "./users.js";
 
 const checkCards = (e) => {
   let flipCard = e.target;
@@ -17,8 +18,8 @@ const checkCards = (e) => {
   }
   if (matchedCards.length === 16) {
     setTimeout(() => {
-      resetGame();
-    }, 1000);
+      nextPlayer();
+    }, 2000);
   }
 };
 
