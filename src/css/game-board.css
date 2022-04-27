@@ -90,11 +90,12 @@
 .flipCard{
     transform: rotateY(180deg) ;
 }
+
 .game__color-div {
     margin-top: -18rem;
-    width: 150%;
+    width: 100%;
     height: 14rem;
-    transform: rotate(-30deg);
+    transform: skewY(-30deg);
     background: linear-gradient(to bottom, 
         #FC7303 14%,  
         #FE5204 14%, 
@@ -108,16 +109,10 @@
         #9F003F 70%, 
         #9F003F 84%, 
         #6A0230 84%);
-    z-index: 1;
+    z-index: 0;
   
 }
 
-.game__color-bar {
-    height: 16rem;
-    margin-left: 8rem;
-    margin-top: 2rem;
-    
-}
 
 .game__footer {
     position: absolute;
@@ -133,15 +128,9 @@
 }
 
 .button--start {
-    color: var(--main-color);
-    background-color: black;
-    box-shadow: inset .2rem .2rem var(--secondary-color);
-    font-weight: bold;
     font-size: 2rem;
-    text-shadow: .1rem .1rem var(--secondary-color);
     width: 60%;
     height: 3.5rem;
-    
 }
 
 .game__time-div {
@@ -153,4 +142,50 @@
     font-weight: bold;
     text-align: center;
     border-radius: 1rem;
+}
+
+
+
+@media screen and (min-width: 800px) {
+
+    .game {
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+    }
+
+    .game__logo {
+        grid-area: 2 / 2 / 3 / 4;
+        width: 14vw;
+        margin-top: 20%;
+    }
+
+    .game__color-div {
+        grid-area: 1 / 1 / -1 / -1;
+        height: 25vh;
+        transform: skewY(-40deg);
+    }
+
+    .game-board {
+        grid-area: 3 / 3 / 5 / 5;
+        margin-left: 20%;
+        transform: scale(1.5);
+    }
+
+    .game__footer {
+        align-self: flex-start;
+        grid-area: 3 / 5 / 5 / 6;
+        gap: 2rem;
+        z-index: 1;
+        margin-left: -25%;
+    }
+
+      .button--start {
+        font-size: 3rem;
+        width: 20rem;
+        height: 4rem;
+        padding: 0.2rem;
+    }
+
 }

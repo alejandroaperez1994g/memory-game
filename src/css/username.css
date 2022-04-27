@@ -97,7 +97,6 @@
         width: 20vw;
         margin-top: 30%;
         margin-right: 10%;
-        
     }
 
     .username__color-div {
@@ -128,18 +127,22 @@
         font-size: 3rem;
     }
 
-      .button--username {
-        grid-area: 6 / 3 / 7 / 5;
+      .button--add-user {
+        grid-area: 6 / 3 / 7 / 4;
         font-size: 3rem;
-        margin-left: 50%;        
+             
         width: 20rem;
 
     }
 
-    .button--username:first-of-type {
-        margin-left: -75%;
+    .button--start-game {
+        grid-area: 6 / 4 / 7 / 5;
+        font-size: 3rem;
+        margin-left: 50%;        
+        width: 20rem;
+        height: 4rem;
+        padding: 0.2rem;
+
     }
 
-    .button--username:nth-of-type(2n) {
-        margin-left: 80%;;
-    }
+}

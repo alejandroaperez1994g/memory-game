@@ -25,7 +25,7 @@
                 <button class="button button--difficulty">Hard</button>
             </div>
         </section>
-        <section class="username">
+        <section class="username hidden">
             <img class="username__logo" src="./src/assets/img/logo_tr.svg" alt="logo of memory game">
             <div class="username__color-div"></div>
             <h3 class="username__heading">Add User</h3>
@@ -33,10 +33,10 @@
             <div id="error_message" class="username__message-div hidden">
                 <p class="username__message">Add Users</p>
             </div>
-            <button id='add_user' class="button button--username">Add User</button>
-            <button id="start_game" class="button button--username">Start Game</button>
+            <button id='add_user' class="button button--username button--add-user">Add User</button>
+            <button id="start_game" class="button button--username button--start-game">Start Game</button>
         </section>
-        <section class="game hidden">
+        <section class="game">
             <img class="game__logo" src="./src/assets/img/logo_tr.svg" alt="logo of memory game">
             <article id="game_board" class="game-board">
             </article>

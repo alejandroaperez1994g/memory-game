@@ -110,6 +110,8 @@
       .button--difficulty {
         font-size: 3rem;
         width: minmax(20vh, 50%);
+        height: 4rem;
+        padding: 0.2rem;
 
     }
 
