@@ -109,7 +109,6 @@ function processClick (e) {
     gamePage.classList.remove('hidden');
     currentPage = 'game';
    }
-   
 }
 
 shuffleCards();
