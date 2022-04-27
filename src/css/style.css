@@ -35,7 +35,7 @@ body {
 }
 
 .button {
-    border: solid 0.2rem var(--blue-highlight);
+    border: solid 0.25rem var(--blue-highlight);
     border-radius: 0.5rem;
     color: var(--main-color);
     background-color: black;
@@ -43,6 +43,8 @@ body {
     font-style: italic;
     z-index: 1;
 }
+
+
 
 .game__card {
     height: 5rem;
