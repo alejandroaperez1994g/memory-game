@@ -208,7 +208,6 @@
 
     .game__footer {
         gap: 5rem;
-       
     }
 
       .button--start {
@@ -226,5 +225,5 @@
         max-width: 40rem;
         height: 8rem;
     }
-
+    
 }

@@ -23,7 +23,7 @@ const getLocalStorage = () => {
 };
 
 const updateScoreboard = () => {
-  while (scoreboardResults.firstChild) {
+  while (scoreboardResults.children.length > 1) {
     scoreboardResults.removeChild(scoreboardResults.lastChild);
   }
   getScoreboard();
