@@ -16,7 +16,7 @@ const difficultyButtons = document.querySelectorAll(".button--difficulty");
 const user_input = document.getElementById("user_input");
 const usernameButtons = document.querySelectorAll(".button--username");
 const addUserButton = document.getElementById("add_user");
-const playAgain = document.getElementById("button--play-again");
+const playAgain = document.getElementById("play-again");
 const scoreboardResults = document.getElementById("scoreboard_section");
 
 // Page variables
